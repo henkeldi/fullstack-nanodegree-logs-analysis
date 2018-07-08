@@ -59,8 +59,8 @@ def main():
     c.execute(query)
     results = c.fetchall()
 
-    print '3. On which days did more than {:.1%} of requests lead to errors?'.format(
-        ERROR_THRESHOLD)
+    print '3. On which days did more than {:.1%} of requests lead to errors?'\
+        .format(ERROR_THRESHOLD)
     print '\n'.join(
         ['{0:%B} {0:%d}, {0:%Y} — {1:.1%} errors'.format(*r) for r in results])
     print
